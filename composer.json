@@ -1,0 +1,13 @@
+{
+    "name": "mkluczka/deptrac",
+    "type": "library",
+    "require": {
+        "qossmic/deptrac-shim": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Michał Kluczka",
+            "email": "mkluczka@gmail.com"
+        }
+    ]
+}

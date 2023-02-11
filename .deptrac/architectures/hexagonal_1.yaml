@@ -1,0 +1,48 @@
+deptrac:
+  layers:
+    - name: Module
+      collectors:
+        - type: bool
+          must:
+            - type: className
+              value: ^%module%\\.*
+          must_not:
+            - type: layer
+              layer: Adapters
+
+            - type: layer
+              layer: Ports
+
+            - type: layer
+              layer: Application
+
+            - type: layer
+              layer: Domain
+
+            - type: layer
+              layer: Infrastructure
+
+    - name: Adapters
+      collectors:
+        - type: className
+          value: ^%module%\\Adapters\\.*
+
+    - name: Ports
+      collectors:
+        - type: className
+          value: ^%module%\\Ports\\.*
+
+    - name: Application
+      collectors:
+        - type: className
+          value: ^%module%\\Application\\.*
+
+    - name: Domain
+      collectors:
+        - type: className
+          value: ^%module%\\Domain\\.*
+
+    - name: Infrastructure
+      collectors:
+        - type: className
+          value: ^%module%\\Infrastructure\\.*
